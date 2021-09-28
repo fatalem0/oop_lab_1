@@ -47,22 +47,22 @@ int Record::getImpact() const {
     return this->impact;
 }
 
-void Record::setDate(std::string newDate) {
+void Record::setDate(const std::string& newDate) {
     if (not checkDate(newDate)) {
         throw std::exception();
     }
     this->date = newDate;
 }
 
-void Record::setFullName(std::string newName) {
+void Record::setFullName(const std::string& newName) {
     this->fullName = newName;
 }
 
-void Record::setPosition(std::string newPosition) {
+void Record::setPosition(const std::string& newPosition) {
     this->position = newPosition;
 }
 
-void Record::setAcdDegree(std::string newAcdDegree) {
+void Record::setAcdDegree(const std::string& newAcdDegree) {
     this->acd_degree = newAcdDegree;
 }
 
@@ -70,7 +70,7 @@ void Record::setImpact(int newImpact) {
     this->impact = newImpact;
 }
 
-bool Record::checkDate(std::string date) {
+bool Record::checkDate(const std::string& date) {
     if (date.length() != 8) {
         return false;
     }

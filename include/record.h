@@ -13,13 +13,13 @@ public:
     const std::string& getAcdDegree() const;
     int getImpact() const;
 
-    void setDate(std::string newDate);
-    void setFullName(std::string newName);
-    void setPosition(std::string newPosition);
-    void setAcdDegree(std::string newAcdDegree);
+    void setDate(const std::string& newDate);
+    void setFullName(const std::string& newName);
+    void setPosition(const std::string& newPosition);
+    void setAcdDegree(const std::string& newAcdDegree);
     void setImpact(int newImpact);
 
-    bool checkDate(std::string date);
+    bool checkDate(const std::string& date);
 
     ~Record() = default;
 private:
