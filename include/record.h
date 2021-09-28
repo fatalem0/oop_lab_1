@@ -1,6 +1,16 @@
 #ifndef RECORD_H
 #define RECORD_H
 #include <string>
+#define DATE "13:00:41"
+#define FULL_NAME "Kyro Sao"
+#define POSITION "Director"
+#define ACD_DEGREE "PHD"
+#define IMPACT 5
+#define DATE_1 "22:11:21"
+#define FULL_NAME_1 "Ilya Vibe"
+#define POSITION_1 "Engineer"
+#define ACD_DEGREE_1 "MCS"
+#define IMPACT_1 3
 class Record {
 public:
     Record();
