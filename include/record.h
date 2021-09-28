@@ -22,7 +22,9 @@ public:
 
     const bool checkDate(const std::string& date);
 
-    ~Record() = default;
+    ~Record() {
+
+    } ;
 private:
     std::string date;
     std::string fullName;
