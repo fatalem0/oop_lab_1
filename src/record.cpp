@@ -8,7 +8,8 @@ Record::Record() {
     impact = 0;
 }
 
-Record::Record(std::string date, std::string fullName, std::string position, std::string acd_degree, int impact) {
+Record::Record(const std::string& date, const std::string& fullName, const std::string& position,
+               const std::string& acd_degree, int impact) {
     if (not Record::checkDate(date)) {
         throw std::exception();
     }
@@ -70,7 +71,7 @@ void Record::setImpact(int newImpact) {
     this->impact = newImpact;
 }
 
-bool Record::checkDate(const std::string& date) {
+const bool Record::checkDate(const std::string& date) {
     if (date.length() != 8) {
         return false;
     }

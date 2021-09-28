@@ -4,7 +4,8 @@
 class Record {
 public:
     Record();
-    Record(std::string date, std::string fullName, std::string position, std::string acd_degree, int impact);
+    Record(const std::string& date, const std::string& fullName, const std::string& position,
+           const std::string& acd_degree, int impact);
     Record(const Record& record);
 
     const std::string& getDate() const;
@@ -19,7 +20,7 @@ public:
     void setAcdDegree(const std::string& newAcdDegree);
     void setImpact(int newImpact);
 
-    bool checkDate(const std::string& date);
+    const bool checkDate(const std::string& date);
 
     ~Record() = default;
 private:
