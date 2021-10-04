@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/record.h"
+#include "../include/journal.h"
 #include <cassert>
 
 int main() {
@@ -45,6 +46,13 @@ int main() {
     assert(copyRecord.getImpact() == IMPACT_1);
     std::cout << "getter and setter test was done" << std::endl;
 
+    Journal journal = Journal(5);
+    journal.add(new Record("22:55:55", "Ivan Tsiganov", "headteacher", "bachelor", 3));
+//    printJournal(journal);
+    journal.dumpToFile("example.txt");
+    Journal another = Journal();
+    another.loadFromFile("example.txt");
+    printJournal(another);
     std::cout << "All tests completed without errors" << std::endl;
     return 0;
 }

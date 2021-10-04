@@ -90,6 +90,14 @@ const bool Record::checkDate(const std::string& date) {
     return true;
 }
 
+std::string Record::toString() const {
+    return date + ';' + fullName + ';' + position + ';' + acd_degree + ';' + std::to_string(impact);
+}
+
+std::string Record::getType() const {
+    return "Record";
+}
+
 bool operator==(const Record& r1, const Record& r2) {
     return r1.getImpact() == r2.getImpact()
            && r1.getDate() == r2.getDate()
