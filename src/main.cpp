@@ -47,7 +47,7 @@ int main() {
     std::cout << "getter and setter test was done" << std::endl;
 
     Journal journal = Journal(5);
-    journal.add(new Record("22:55:55", "Ivan Tsiganov", "headteacher", "bachelor", 3));
+    journal.add(new Record("22:55:55", "Ivan Ivanov", "headteacher", "bachelor", 3));
     journal.dumpToFile("example.txt");
     Journal another = Journal();
     another.loadFromFile("example.txt");
