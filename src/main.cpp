@@ -48,7 +48,6 @@ int main() {
 
     Journal journal = Journal(5);
     journal.add(new Record("22:55:55", "Ivan Tsiganov", "headteacher", "bachelor", 3));
-//    printJournal(journal);
     journal.dumpToFile("example.txt");
     Journal another = Journal();
     another.loadFromFile("example.txt");
