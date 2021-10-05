@@ -32,6 +32,10 @@ public:
 
     const bool checkDate(const std::string& date);
 
+    std::string toString() const;
+
+    std::string getType() const;
+
     ~Record() {
 
     } ;
